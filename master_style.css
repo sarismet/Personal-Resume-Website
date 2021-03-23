@@ -1,408 +1,219 @@
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Lora|Raleway");
-@import url('https://fonts.googleapis.com/css?family=Italianno|Lusitana|Six+Caps|Varela+Round|ZCOOL+QingKe+HuangYou&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Italianno|Lusitana|Six+Caps|Varela+Round|ZCOOL+QingKe+HuangYou&display=swap");
 
 .saas {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header,
 section {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 :root {
-    --Sniglet-font: "Sniglet", cursive;
-    --Rubik: "Rubik", cursive;
-    --Patua: "Patua One", cursive;
-    --Lobster: "lobster", cursive;
-    --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(to bottom, #f3f0f1, #d6d3d2);
-    --light-gray: rgba(255, 255, 255, 0.877);
+  --Sniglet-font: "Sniglet", cursive;
+  --Rubik: "Rubik", cursive;
+  --Patua: "Patua One", cursive;
+  --Lobster: "lobster", cursive;
+  --light-black: #2e2c2caf;
+  --bggradient: linear-gradient(to bottom, #f3f0f1, #d6d3d2);
+  --light-gray: rgba(255, 255, 255, 0.877);
 }
 
 header a {
-    font-family: var(--Sniglet-font);
-    font-size: 1.1em;
-    color: rgb(27, 4, 4);
+  font-family: var(--Sniglet-font);
+  font-size: 1.1em;
+  color: rgb(27, 4, 4);
 }
 
 header {
-    background: white;
-    /*   background: var(--bggradient);*/
-
+  background: white;
 }
 
-.profile-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px 0;
-    background-color: rgb(249,249,254);
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  background-color: rgb(249, 249, 254);
 }
 
 .profile-col-1 {
-    flex-basis: 40%;
-    position: relative;
-    margin-left: 150px;
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 150px;
+}
+
+.profile-col-1 h1 {
+  margin: 50px 0px;
+  font-family: var(--Rubik);
+}
+
+h1 {
+  font-family: var(--Rubik);
+}
+
+h5 {
+  font-family: var(--Rubik);
+}
+
+p {
+  font-family: var(--Rubik);
+}
+
+.profile-col-1 h5 {
+  margin: 50px 0px;
+}
+
+.profile-col-1 p {
+  margin: 50px 0px;
 }
 
 .profile-col-2 {
+  flex-basis: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1214px;
+  height: 778px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 880px) {
+  .profile-col-2 {
     flex-basis: 60%;
     position: relative;
     display: flex;
     align-items: center;
-    width: 1214px;
-    height: 778px;
+    width: 300px;
+    height: 378px;
+  }
 
-}
-
-img {
+  .profile-col-1 img {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  .profile-row {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+
+  .profile-col-2 {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+
+  .profile-col-1 {
+    flex-basis: 100%;
+    margin-left: 50px;
+  }
+
+  .profile-col-1 h1 {
+    font-size: 20px;
+  }
 }
-
-
-@media only screen and (max-width:700px) {
-
-
-    .profile-col-2 {
-        flex-basis: 60%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        width: 300px;
-        height: 378px;
-    
-    }
-    
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .profile-row {
-        flex-direction: column-reverse;
-        margin: 50px 0;
-    }
-
-    .profile-col-2 {
-        flex-basis: 100%;
-        margin-bottom: 50px;
-    }
-}
-
-
 
 .profile-col-1 p {
-
-    font-size: 16px;
-    font-weight: 100;
-
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .profile-col-1 h5 {
-
-    font-size: 16px;
-    font-weight: 50;
-
+  font-size: 16px;
+  font-weight: 50;
 }
 
-button{
-    width: 140px;
-    height: 40px;
-    border: 0;
-    padding: 12px, 12px;
-    outline: none;
-    color: white;
-    background: linear-gradient(to right, #8491fe, #62bcfb);
-    cursor: pointer;
-    border-radius: 3px;
+button {
+  width: 140px;
+  height: 40px;
+  border: 0;
+  padding: 12px, 12px;
+  outline: none;
+  color: white;
+  background: linear-gradient(to right, #8491fe, #62bcfb);
+  cursor: pointer;
+  border-radius: 3px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: white;
-    min-width: 160px;
-    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0, 2);
-    z-index: 1;
+.card-post {
+  width: 100%;
+  max-width: 98rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.container {
+  margin-bottom: 2rem;
 }
 
-.dropdown-content a:hover {
-    background: #ddd;
+.card-post-img {
+  min-width: 15rem;
+  max-width: 35rem;
+  min-height: 15rem;
+  max-height: 35rem;
+  transform: translateX(-8rem);
+  position: relative;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block
+.card-post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
 }
 
-header .nav-item:last-child {
-    padding-right: 10.5em;
+.card-post-date span {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.1rem 0;
 }
 
-header .nav-item {
-    padding: 0.9em;
+.card-post-title {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #62bcfb;
 }
 
-header .row {
-    padding-bottom: 50px;
-    padding-top: 50px;
+.card-post-text {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
+@media screen and (max-width: 880px) {
+  .card-post {
+    flex-direction: column;
+    padding: 2.5rem;
+    border: 1px solid #62bcfb;
+  }
 
-
-.section-1 .row .col-md-6 .pray img {
-
-    opacity: 0.9;
-    width: 80%;
-    border-radius: 0.2em;
-
-}
-
-.section-1 .row .col-6:last-child {
-    position: relative;
-}
-
-.section-1 .row .col-md-6 .panel {
-    position: absolute;
-    height: 85%;
-    top: 7vmin;
-    left: -8vmin;
-    background: white;
-    border-radius: 3px;
-    text-align: left;
-    padding: 3vmin 3vmin 2vmin 7vmin;
-    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-    font-family: var(--Rubik);
-    z-index: 1;
-}
-
-.button_of_ismet {
-    background-color: rgb(9, 9, 187);
-    position: absolute;
-    border: none;
-    bottom: 0;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    width: 100%;
-    left: -0vmin;
-    border-radius: 4px;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button_of_ismet:hover {
-    background-color: rgb(3, 3, 243);
-    color: white;
-}
-
-.cover {
-    margin: 0 75px 0 75px;
-
-    background: url("cover.jpg");
-    height: 55vmin;
-    background-position: 0 -25rem;
-    background-size: 100%;
-    position: relative;
-}
-
-.cover .content {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-top: 19vmin;
-}
-
-.cover .content>h1 {
-    font-family: var(--Patua);
-    font-size: 6vmin;
-    color: whitesmoke;
-}
-
-.cover .content>p {
-    font-family: var(--Patua);
-    font-size: 2vmin;
-    color: whitesmoke;
-}
-
-.numbers .rect {
-    position: relative;
-    z-index: 1;
-    background: white;
-    width: 22rem;
-    height: 12rem;
-    padding-top: 3.5vmin;
-    margin: 1rem;
-    border-radius: .5em;
-    box-shadow: 1px 2px 50px 0px rgba(8, 1, 1, 0.349);
-    ;
-
-}
-
-.numbers {
-    margin-top: -12vmin;
-}
-
-.numbers .rect p {
-    font-family: var(--Patua);
-}
-
-.purchase>h1 {
-    padding-top: 15vmin;
-    padding-bottom: 0.1em;
-    font-size: 7vmin;
-    font-family: var(--Lobster);
-}
-
-.purchase>p {
-    color: var(--light-black);
-    font-size: 3vmin;
-    padding-bottom: 10vmin;
-}
-
-.purchase .cards .card {
-    width: 25rem;
-    margin: 3vmin 3vmin;
-}
-
-.pricing>h1 {
-    font-size: 3.5vmin;
-    font-family: var(--Lora);
-}
-
-.pricing>h5 {
-    font-size: 3.5vmin;
-    font-family: var(--Patua);
-}
-
-.cards div {
-    padding: 0;
-    margin: 0;
-}
-
-.cards .title {
-    background: rgba(208, 241, 241, 0.199);
-    padding: 1.4em 2.5em;
-    font-size: 2vmin;
-}
-
-.card .card-text {
-    padding: 2.5rem 3rem;
-    color: var(--light-black);
-}
-
-.card-body .pricing {
-    background: rgba(208, 241, 241, 0.199);
-    border-top-right-radius: 170px;
-    border-top-left-radius: 170px;
-}
-
-.card-body .pricing>h5 {
-    font-size: 10vmin;
-    padding: 1em 0.5em;
-}
-
-.section3 {
-    margin: 45px 75px 45px 75px;
-
-    background: url("poem.jpg");
-    height: 125vmin;
-
-    background-size: 100%;
-    position: relative;
-}
-
-.section3 .coverimage {
-
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-top: 19vmin;
-
-}
-
-
-
-
-.coverimage .content>h1 {
-    font-family: Italianno;
-    font-size: 6vmin;
-    color: whitesmoke;
-}
-
-.coverimage .content>p {
-    font-family: Italianno;
-    font-size: 2vmin;
-    color: whitesmoke;
-}
-
-.section-4 .container h1 {
-    font-family: Italianno;
-    font-size: 7vmin;
-    padding-top: 4vmin;
-}
-
-.section-4 .team {
-    padding: 10vmin 4vmin;
-}
-
-.section-4 .card {
-
-    width: 22em;
-    margin-top: 1vmin;
-}
-
-.section-4 .card .card-title {
-    font-family: Varela Round;
-}
-
-.section-4 .card .card-text {
-    font-family: Lusitana;
-    padding: 0.5em;
-}
-
-
-
-.section-4 .carousel-item {
-    padding-left: 3rem;
-}
-
-
-footer {
-    margin-top: 15px;
-    background: rgba(0, 0, 0, 0.815);
-    overflow-x: hidden;
-    padding: 14vmin 18vmin;
-}
-
-footer p>a>span {
-    color: #ff512f;
-}
-
-
-footer .column a>i {
-    color: #dd2476;
-
-}
-
-footer .column a+a {
-    padding: 0 0.5em;
+  .card-post-img {
+    min-width: 40%;
+    max-width: 40%;
+    min-height: 40%;
+    max-height: 40%;
+    transform: translate(0, -4rem);
+  }
+  .card-post-img img {
+    border: 1px solid #62bcfb;
+  }
 }
