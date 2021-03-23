@@ -47,24 +47,54 @@ header {
 }
 
 .profile-col-1 {
-    flex-basis: 70%;
+    flex-basis: 40%;
     position: relative;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 .profile-col-2 {
-    flex-basis: 30%;
+    flex-basis: 60%;
     position: relative;
     display: flex;
     align-items: center;
-    width: 283px;
-    height: 613px;
+    width: 1214px;
+    height: 778px;
 
 }
 
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+
+@media only screen and (max-width:700px) {
+
+
+    .profile-col-2 {
+        flex-basis: 60%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 378px;
+    
+    }
+    
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .profile-row {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .profile-col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
 }
 
 
@@ -308,6 +338,7 @@ header .row {
     padding-top: 19vmin;
 
 }
+
 
 
 
