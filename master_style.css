@@ -89,6 +89,20 @@ img {
   max-height: 100%;
 }
 
+.my-services {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 100px;
+}
+
+.single-services {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  text-align: center;
+  margin-top: 60px;
+}
+
 @media only screen and (max-width: 880px) {
   .profile-col-2 {
     flex-basis: 60%;
@@ -168,6 +182,46 @@ button {
   max-height: 35rem;
   transform: translateX(-8rem);
   position: relative;
+}
+
+.service-box {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.service-box div {
+  margin: 0 auto;
+}
+
+.service-post-img-box {
+  height: 120px;
+}
+
+.service-post-img {
+  max-width: 7rem;
+  min-width: 3rem;
+  max-height: 7rem;
+  min-height: 3rem;
+}
+
+.service-post-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-post-title {
+  margin: 1rem 0;
+  font-weight: 450;
+  font-size: 1.5rem;
+}
+
+.service-post-text {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .card-post-img img {
