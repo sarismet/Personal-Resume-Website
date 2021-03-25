@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Lora|Raleway");
 @import url("https://fonts.googleapis.com/css?family=Italianno|Lusitana|Six+Caps|Varela+Round|ZCOOL+QingKe+HuangYou&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 .saas {
   position: absolute;
@@ -36,6 +37,23 @@ header {
   background: white;
 }
 
+.my-title {
+  text-align: center;
+  margin: 70px 0;
+}
+
+.my-title p {
+  font-weight: 50;
+}
+
+.my-title h1 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: var(--Sniglet-font);
+  color: #222;
+  line-height: 1.2em !important;
+}
+
 .profile-row {
   display: flex;
   justify-content: space-between;
@@ -43,11 +61,53 @@ header {
   margin: 50px 0;
   background-color: rgb(249, 249, 254);
 }
+.profile-col-0 {
+  flex-basis: 3%;
+  position: relative;
+  margin-left: 0px;
+}
+
+.social-icons {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 80px;
+}
+
+.social-icons ul {
+  padding: initial;
+}
+
+.social-icons ul li {
+  height: 40px;
+  width: 40px;
+  list-style-type: none;
+  padding-left: 12px;
+  padding-top: 6px;
+  margin-top: 5px;
+  color: #fff;
+  background-color: #62bcfb;
+}
+
+.social-icons ul li:hover {
+  padding-left: 30px;
+  transition: 0.6s;
+  width: 80px;
+}
 
 .profile-col-1 {
-  flex-basis: 40%;
+  flex-basis: 37%;
   position: relative;
   margin-left: 150px;
+}
+
+.profile-col-2 {
+  flex-basis: 60%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1214px;
+  height: 778px;
 }
 
 .profile-col-1 h1 {
@@ -75,24 +135,70 @@ p {
   margin: 50px 0px;
 }
 
-.profile-col-2 {
-  flex-basis: 60%;
+.my-services {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 100px;
+}
+
+.my-footer {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 100px;
+}
+
+.footer-part {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 1214px;
-  height: 778px;
+  top: 50%;
+}
+
+.footer-part .content p {
+  text-align: justify;
+}
+.footer-part .content .social {
+  margin: 15px 0 0 0;
+}
+.footer-part .content .social a {
+  padding: 0 2px;
+}
+
+.footer-part .content .social a span {
+  height: 35px;
+  width: 35px;
+  background: #62bcfb;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 7px;
+}
+
+.address-content {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 10px;
+}
+
+.address-content .fas {
+  font-size: 1rem;
+  background: #1a1a1a;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.address-content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
-}
-
-.my-services {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-gap: 100px;
 }
 
 .single-services {
@@ -103,7 +209,26 @@ img {
   margin-top: 60px;
 }
 
+footer {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  height: 406px;
+  bottom: 0px;
+  width: 100%;
+  background: #04091e;
+}
+
 @media only screen and (max-width: 880px) {
+  .my-services {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: none;
+    grid-gap: 100px;
+  }
+
   .profile-col-2 {
     flex-basis: 60%;
     position: relative;
@@ -131,6 +256,10 @@ img {
   .profile-col-1 {
     flex-basis: 100%;
     margin-left: 50px;
+  }
+
+  .profile-col-0 {
+    display: none;
   }
 
   .profile-col-1 h1 {
@@ -253,7 +382,7 @@ button {
   color: rgba(0, 0, 0, 0.7);
 }
 
-@media screen and (max-width: 880px) {
+@media only screen and (max-width: 880px) {
   .card-post {
     flex-direction: column;
     padding: 2.5rem;
