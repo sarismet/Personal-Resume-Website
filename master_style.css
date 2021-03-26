@@ -144,14 +144,14 @@ p {
 .header-buttons {
   display: grid;
   grid-template-columns: 150px 150px;
-  grid-gap: 50px;
+  grid-gap: 10%;
 }
 
 .header-buttons a {
   width: 140px;
   height: 40px;
   border: 0;
-  padding: 12px, 12px;
+  padding: 12%, 12%;
   outline: none;
   color: white;
   background: linear-gradient(to right, #8491fe, #62bcfb);
@@ -240,12 +240,10 @@ img {
 }
 
 footer {
-  margin: 0;
-  padding: 0;
   color: #fff;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  height: 406px;
+  height: 407px;
   bottom: 0px;
   width: 100%;
   background: #04091e;
@@ -260,7 +258,7 @@ footer {
   }
 
   footer {
-    height: 801px;
+    min-height: 907px;
   }
 
   .my-footer {
@@ -365,6 +363,10 @@ button {
   margin: 0 auto;
 }
 
+.service-box p {
+  height: 150px;
+}
+
 .service-post-img-box {
   height: 120px;
 }
@@ -428,6 +430,10 @@ button {
     flex-direction: column;
     padding: 2.5rem;
     border: 1px solid #62bcfb;
+  }
+
+  .service-box p {
+    height: auto;
   }
 
   .card-post-img {
