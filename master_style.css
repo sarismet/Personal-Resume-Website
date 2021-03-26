@@ -137,7 +137,7 @@ p {
 
 .my-services {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 315px 315px 315px;
   grid-gap: 100px;
 }
 
@@ -243,7 +243,7 @@ footer {
   color: #fff;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  height: 407px;
+  height: 307px;
   bottom: 0px;
   width: 100%;
   background: #04091e;
@@ -258,7 +258,7 @@ footer {
   }
 
   footer {
-    min-height: 907px;
+    min-height: 657px;
   }
 
   .my-footer {
@@ -328,6 +328,42 @@ button {
   border-radius: 3px;
 }
 
+.profile-col-1 a {
+  width: 140px;
+  height: 40px;
+  border: 0;
+  padding: 12px, 12px;
+  outline: none;
+  color: white;
+  background: linear-gradient(to right, #8491fe, #62bcfb);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.card-post a {
+  width: 140px;
+  height: 40px;
+  border: 0;
+  padding: 12px, 12px;
+  outline: none;
+  color: white;
+  background: linear-gradient(to right, #8491fe, #62bcfb);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.service-box .btn {
+  width: 140px;
+  height: 40px;
+  border: 0;
+  padding: 12px, 12px;
+  outline: none;
+  color: white;
+  background: linear-gradient(to right, #8491fe, #62bcfb);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 .card-post {
   width: 100%;
   max-width: 98rem;
@@ -364,7 +400,11 @@ button {
 }
 
 .service-box p {
-  height: 150px;
+  height: 201px;
+}
+
+.my-services .service-box:nth-child(-n + 3) p {
+  height: 91px;
 }
 
 .service-post-img-box {
