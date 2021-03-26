@@ -82,8 +82,9 @@
                     <button type= "button">
                         Let's Talk
                     </button>
-                    <a href="resume.pdf" button type="button" class="btn btn-primary"> <i
-                        class="fas fa-download"></i> Resume</button></a>
+                    <form action="/resume" method="post">
+                        <button name="resume1" value='1'><i class="fas fa-download"></i> Resume </button>
+                    </form>
                 </div>
                 
             </div> 
@@ -372,13 +373,11 @@
                   <h2>Resume</h2>
                   <div class="content">
                     <p>You can reach my resume through link below</p>
-                    <form action="#">
                       <div class="email">
-                        <a href="resume.pdf" button type="button" class="btn btn-primary"> <i
-                            class="fas fa-download"></i> Resume</button></a>
-                        
+                        <form action="/resume" method="post">
+                            <button name="resume2" value='2'><i class="fas fa-download"></i> Resume </button>
+                        </form>
                       </div>
-                    </form>
                   </div>
                 </div>
               </div>
