@@ -9,18 +9,36 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 
+var path = ""
+var requestUL = ""
+
 app.get('/', function (_, respond) {
-    respond.sendFile('/Users/ismetsari/Desktop/Personal-Resume-Website/master.html');
+    respond.sendFile(path + 'master.html');
 });
 
-app.listen(8081, () => {
-    console.log("Example app listening at port 8081")
+app.listen(80, () => {
+    console.log("Example app listening at port 80")
 })
 
 app.post('/resume', function(_, respond) {
-    var data = fs.readFileSync('/Users/ismetsari/Desktop/Personal-Resume-Website/files/resume.pdf');
+    var data = fs.readFileSync(path + 'files/resume.pdf');
     respond.contentType("application/pdf");
     respond.send(data);
+
+    var clientServer = {
+        uri: requestUL+"/papers/notify",
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    request(clientServer, function (error, response) {
+        if (error) {
+            console.log(error,response);
+        }
+        return;
+    });
+
 });
 
 app.post('/send_mail', function(req, res,) {
@@ -33,7 +51,7 @@ app.post('/send_mail', function(req, res,) {
     }
     console.log("firstName: ",send_req)
     var clientServer = {
-        uri: 'http://',
+        uri: requestUL+"/papers/sendEmail",
         body: JSON.stringify(send_req),
         method: 'POST',
         headers: {
