@@ -9,8 +9,6 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 
-var path = ""
-var requestUL = ""
 
 app.get('/', function (_, respond) {
     respond.sendFile(path + 'master.html');
@@ -22,8 +20,6 @@ app.listen(80, () => {
 
 app.post('/resume', function(_, respond) {
     var data = fs.readFileSync(path + 'files/resume.pdf');
-    respond.contentType("application/pdf");
-    respond.send(data);
 
     var clientServer = {
         uri: requestUL+"/papers/notify",
@@ -36,9 +32,11 @@ app.post('/resume', function(_, respond) {
         if (error) {
             console.log(error,response);
         }
-        return;
+        console.log("request is sent")
     });
-
+	
+    respond.contentType("application/pdf");
+    respond.send(data);
 });
 
 app.post('/send_mail', function(req, res,) {
@@ -62,6 +60,9 @@ app.post('/send_mail', function(req, res,) {
         if (error) {
             console.log(error,response);
         }
+	    console.log("email is sent")
         return;
+
     });
+    res.sendFile(path + 'master.html');
 });
